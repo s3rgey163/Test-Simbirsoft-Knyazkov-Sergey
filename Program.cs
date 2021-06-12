@@ -22,7 +22,7 @@ namespace test
                         Menu();
                         break;
                     case ConsoleKey.D2:
-                        unique();
+                        Unique();
                         Menu();
                         break;
                     case ConsoleKey.Escape:
@@ -34,7 +34,7 @@ namespace test
         }
 
 
-        private static void unique()
+        private static void Unique()
         {
             Console.Clear();
             Console.Write("Введите адрес HTML страницы: ");
@@ -45,7 +45,7 @@ namespace test
             HtmlProc html = new HtmlProc();
             string[] words = null;
             bool tryToGet = true;
-            while (tryToGet && !html.getAllWords(url,out words))
+            while (tryToGet && !html.GetAllWords(url,out words))
             {
                 Console.WriteLine("Ошибка: '{0}' {1}", url, Logs.GetLastError);
                 Console.WriteLine("Для повтора, нажмите Y. Для того, чтобы выйти в меню, любую другую клавишу.");
@@ -82,7 +82,7 @@ namespace test
             HtmlProc html = new HtmlProc();
             bool tryDownload = true;
             string page = null;
-            while (tryDownload && !html.getHtmlPage(url,out page))
+            while (tryDownload && !html.GetHtmlPage(url,out page))
             {
                 Console.WriteLine("Ошибка: '{0}' {1}", url, Logs.GetLastError);
                 Console.WriteLine("Для повтора, нажмите Y. Для того, чтобы выйти в меню, любую другую клавишу.");
@@ -102,7 +102,7 @@ namespace test
             }
             if (tryDownload)
             {
-                FileManager fPage = new FileManager(HtmlProc.getName(url) + ".html");
+                FileManager fPage = new FileManager(HtmlProc.GetName(url) + ".html");
                 fPage.WriteFile(page, FileManager.WriteFileOptions.REWRITE_ALWAYS);
                 Console.WriteLine("HTML страница успешна скачана.\n{0}",fPage.GetPath);
                 Console.ReadKey();

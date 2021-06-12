@@ -13,7 +13,7 @@ namespace test
    
     class HtmlProc
     {
-        public bool getHtmlPage(string url, out string page)
+        public bool GetHtmlPage(string url, out string page)
         {          
             bool download = false;
             page = null;
@@ -59,7 +59,7 @@ namespace test
             return download;
         }
 
-        public static string getName(string url)
+        public static string GetName(string url)
         {
             byte i = 0;
             string temp;
@@ -87,7 +87,7 @@ namespace test
         /// <param name="text">Текст, который необходимо преобразовать</param>
         /// <param name="ch">Символ разделитель</param>
         /// <returns></returns>
-        private string textToWords(string text, char ch)
+        private string TextToWords(string text, char ch)
         {
             string temp = text;
             int y = 0;
@@ -140,7 +140,7 @@ namespace test
         }
 
 
-        public bool getAllWords(string url, out string[] words)
+        public bool GetAllWords(string url, out string[] words)
         {
             string temp ="" ;
             words = null;
@@ -168,7 +168,7 @@ namespace test
                 {
                     if (regex.IsMatch(node.InnerText))
                     {
-                        temp += textToWords(node.InnerText, '\n');
+                        temp += TextToWords(node.InnerText, '\n');
                     }
 
                 }

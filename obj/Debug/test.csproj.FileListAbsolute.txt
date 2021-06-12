@@ -9,3 +9,14 @@ C:\Users\Sergey\Desktop\Предметы\3 КУРС 2 СЕМЕСТР\Тесто�
 C:\Users\Sergey\Desktop\Предметы\3 КУРС 2 СЕМЕСТР\Тестовое задание\test\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Sergey\Desktop\Предметы\3 КУРС 2 СЕМЕСТР\Тестовое задание\test\obj\Debug\test.csproj.CopyComplete
 C:\Users\Sergey\Desktop\Предметы\3 КУРС 2 СЕМЕСТР\Тестовое задание\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\test.exe.config
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\test.exe
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\test.pdb
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.csproj.CopyComplete
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.exe
+C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.pdb
