@@ -15,7 +15,6 @@ C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\test.pdb
 C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\bin\Debug\HtmlAgilityPack.xml
-C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.csprojAssemblyReference.cache
 C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.csproj.CoreCompileInputs.cache
 C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.csproj.CopyComplete
 C:\Users\Sergey\Desktop\Test-Simbirsoft-Knyazkov-Sergey-main\obj\Debug\test.exe

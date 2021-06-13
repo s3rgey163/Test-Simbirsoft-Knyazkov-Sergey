@@ -40,6 +40,8 @@ namespace test
             Console.Write("Введите адрес HTML страницы: ");
           
             string url = Console.ReadLine();
+            if (url.StartsWith("www"))
+                url = url.Insert(0, "https://");
             Console.WriteLine();
 
             HtmlProc html = new HtmlProc();
@@ -77,6 +79,8 @@ namespace test
             Console.Clear();
             Console.Write("Введите адрес HTML страницы: ");
             string url = Console.ReadLine();
+            if (url.StartsWith("www"))
+                url = url.Insert(0, "https://");
             Console.WriteLine();
 
             HtmlProc html = new HtmlProc();

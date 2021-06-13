@@ -81,43 +81,6 @@ namespace test
             return temp;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="text">Текст, который необходимо преобразовать</param>
-        /// <param name="ch">Символ разделитель</param>
-        /// <returns></returns>
-        private string TextToWords(string text, char ch)
-        {
-            string temp = text;
-            int y = 0;
-            int i = 0;
-            while (i < temp.Length)
-            {
-                if (Char.IsPunctuation(temp[i]) || Char.IsControl(temp[i]) || Char.IsWhiteSpace(temp[i]) || Char.IsDigit(temp[i]))
-                {
-                    y = i;
-                    while (y < temp.Length && (Char.IsPunctuation(temp[y]) || Char.IsControl(temp[y]) || Char.IsWhiteSpace(temp[y]) ||
-                        Char.IsDigit(temp[y])))
-                    {
-                        y++;
-                    }
-                    temp = temp.Remove(i, y - i);
-                    temp = temp.Insert(i, ch.ToString());
-                    i++;
-                    y = i;
-                }
-                i++;
-            }
-            if (temp[temp.Length - 1] != ch)
-                temp = temp.Insert(temp.Length, ch.ToString());
-            if(temp[0] == '\n')
-            {
-                temp = temp.Remove(0,1);
-            }
-            return temp;
-        }
-
         public Dictionary<string,int> GetPairs(string[] words)
         {
             Dictionary<string, int> wordsPairs = new Dictionary<string, int>();
@@ -159,7 +122,9 @@ namespace test
                 var htmlDoc = new HtmlAgilityPack.HtmlDocument();
                 htmlDoc.LoadHtml(temp);
                 temp = "";
+
                 Regex regex = new Regex(@"[a-z]\w*|[а-я]\w*", RegexOptions.IgnoreCase);
+
                 var nodes = htmlDoc.DocumentNode.Descendants().Where(n =>
                     n.NodeType == HtmlNodeType.Text &&
                     n.ParentNode.Name != "script" &&
@@ -168,16 +133,15 @@ namespace test
                 {
                     if (regex.IsMatch(node.InnerText))
                     {
-                        temp += TextToWords(node.InnerText, '\n');
+                        temp += node.InnerText +"\n";
                     }
 
                 }
-                temp = temp.Remove(temp.Length - 1);
 
-                words = temp.Split('\n');
-
+                string pattern = "\",/|!?;.':»«&*@#$[](){}-–—~`+=^%0123456789" + "\n" + "\r" + "\t" + " " + " ";//список разделителей
+                words = temp.Split(pattern.ToCharArray(),StringSplitOptions.RemoveEmptyEntries);
                 isDone = true;
-            }
+                }
             catch (ArgumentException e)
             {
                 Logs.Error(e);
